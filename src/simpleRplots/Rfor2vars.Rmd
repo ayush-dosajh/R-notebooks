@@ -46,7 +46,10 @@ p3 <- ggplot(aes(Year, CO2) , data = co2) +
 grid.arrange(p1 , p2, p3 ,ncol = 1)
 
 
-
+# facet wrap to give data year wise
+ggplot(aes(rain, CO2) , data = co2) +
+  geom_point()+
+  facet_wrap(~Year)
 
 
 
